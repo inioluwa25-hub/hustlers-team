@@ -1,0 +1,223 @@
+
+div { background-color:#6A5ACD;
+width:50%;
+height: 85%;
+border:25px;
+    padding:50px ;
+    margin:100px ;
+position: center;}
+.jumbotron{
+  background-color:#ffffff;
+  height:450px;
+  width:1100px;
+  padding: center;
+}
+h5 {border: 1px solid 
+orange;
+margin: 10px;}
+div.gallery {
+    margin: 3.5%;
+    border: 1px solid #ccc;
+    float: left;
+    width: 280px;
+}
+
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    height: 50%;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: left;
+}
+
+* {
+    box-sizing: border-box;
+}
+h4{text-decoration-color: red;
+
+}
+a {
+  text-decoration-color: black;
+}
+.navbar {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 10%;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #000000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background: #ddd;
+  color: #000000;
+}
+
+.main {
+  padding: 16px;
+  margin-top: 30px;
+  height: 1500px; /* Used in this example to enable scrolling */
+}
+.signup {
+    position: absolute;
+left: 85%;
+right: 8%;
+top: 32%;
+bottom: 20%;
+border: 1px solid #000000;
+box-sizing: border-box;
+border-radius: 2px;
+}
+.login {
+position: absolute;
+left: 80.97%;
+right: 15.9%;
+top: 32.81%;
+bottom: 32.81%;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 21px;
+display: flex;
+align-items: center;
+color: #000000;
+}
+h1 {text-align: center;}
+p {text-align: center;}
+div {text-align: center;}
+a {text-align: center;}
+.responsive {
+  width: 125%;
+  height: 200%;
+}
+.form-4 {
+    /* Size and position */
+    width: 120%;
+    margin: 90px auto 90px;
+    padding: 32px 16px;
+    position: center; 
+    height: 130%;
+    display: block;
+    left: 20px;
+    right: 20px;
+
+
+    /* Font styles */
+    font-family: 'Raleway', 'Lato', Arial, sans-serif;
+    background-image: url(IMAGES/turn.jpg);
+    text-shadow: 0 2px 1px rgba(0,0,0,0.3);
+}
+.form-4 h1 {
+    font-size: 22px;
+    padding-bottom: 20px;
+}
+.form-4 input[type=text],
+.form-4 input[type=password] {
+    /* Size and position */
+    width: 100%;
+    padding: 15px 4px 15px 10px;
+    margin-bottom: 20px;
+
+    /* Styles */
+    border: 1px solid #4e3043; /* Fallback */
+    border: 1px solid rgba(78,48,67, 0.8);
+    background: rgba(0,0,0,0.15);
+    border-radius: 2px;
+    box-shadow: 
+        0 1px 0 rgba(255,255,255,0.2), 
+        inset 0 1px 1px rgba(0,0,0,0.1);
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+
+    /* Font styles */
+    font-family: 'Raleway', 'Lato', Arial, sans-serif;
+    color: #fff;
+    font-size: 13px;
+}
+.form-4 input[type=text]:hover,
+.form-4 input[type=password]:hover {
+    border-color: #333;
+}
+
+.form-4 input[type=text]:focus,
+.form-4 input[type=password]:focus,
+.form-4 input[type=submit]:focus {
+    box-shadow: 
+        0 1px 0 rgba(255,255,255,0.2), 
+        inset 0 1px 1px rgba(0,0,0,0.1),
+        0 0 0 3px rgba(255,255,255,0.15);
+    outline: none;
+}
+
+/* Fallback */
+.no-boxshadow .form-4 input[type=text]:focus,
+.no-boxshadow .form-4 input[type=password]:focus {
+    outline: 1px solid rgb(201, 62, 62);
+}
+.form-4 input[type=submit] {
+    /* Size and position */
+    width: 100%;
+    padding: 20px 20px;
+    
+    /* Styles */
+    background: linear-gradient(rgba(99,64,86,0.5), rgba(76,49,65,0.7));    
+    border-radius: 5px;
+    border: 1px solid #4e3043;
+    box-shadow: 
+    	inset 0 1px rgba(255,255,255,0.4), 
+    	0 2px 1px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+
+    /* Font styles */
+    color: white;
+    text-shadow: 0 1px 0 rgba(0,0,0,0.3);
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Raleway', 'Lato', Arial, sans-serif;
+}
+
+.form-4 input[type=submit]:hover {
+    box-shadow: 
+        inset 0 1px rgba(255,255,255,0.2), 
+        inset 0 20px 30px rgba(99,64,86,0.5);
+}
+
+/* Fallback */
+.no-boxshadow .form-4 input[type=submit]:hover {
+    background: #594642;
+}
+.form-4 label {
+    display: none;
+    padding: 0 0 5px 2px;
+    cursor: pointer;
+}
+
+.form-4 label:hover ~ input {
+    border-color: #333;
+}
+
+.no-placeholder .form-4 label {
+    display: block;
+}
