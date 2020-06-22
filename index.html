@@ -1,31 +1,222 @@
-<html>
-<head>
- <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="../../maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="../../ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="../../maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">  
-  <link rel="stylesheet" href="style.css">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;1,300&display=swap"
+    rel="stylesheet">
+  <link href='style.css' rel='stylesheet' type="text/css">
+  <title>Leader Board</title>
 </head>
 
 <body>
-    <i class="fa fa-cloud"></i>
-    <i class="fa fa-heart"></i>
-    <i class="fa fa-car"></i>
-    <i class="fa fa-file"></i>
-    <i class="fa fa-bars"></i>
-     
-      <div id="body"></div>
-      
-        
-       
-</body>
+    <Header>
+      <div class='container'>
+        <div class='board'>
+          <div>
+            <h1>HNG Leader Board</h1>
+            <p>Total Candidates: <span id='total-user'>1,500</span></p>
+          </div>
+          <div class='sort-user'>
+            <select>
+              <option>Sort by Points</option>
+              <option value=20>20 points</option>
+              <option value=15>15 points</option>
+              <option value=20>Above 10 points</option>
+              <option value=20>8 points</option>
+              <option value=20>Below 6 points</option>
+              <option value=20>4 points</option>
+              <option value=20>3 points</option>
+              <option value=20>2 points</option>
+              <option value=20>1 points</option>
+            </select>
+          </div>
+        </div>
+      </div class='container'>
+    </Header>
+  
+    <section>
+      <div class="container">
+        <h1 class='mb-2'>Top Users</h1>
+        <div class="top-user">
+          <div class='card card-header first'>
+            <div class="card-body">
+              <div class='card-head'>
+                <h1 class='user-name'>Famurewa</h1>
+  
+                <div class='first-place medal'>
+                  <img src='IMAGES/download (8).jpg' width='120'>
+                </div>
+              </div>
+              <div class='user-points'>
+                <h2><span class='score'>25</span>Points</h2>
+              </div>
+            </div>
+          </div>
+          <div class='card card-header second'>
+            <div class="card-body">
+              <div class='user-name'>
+                <div class="card-head">
+                  <h1>Korede</h1>
+                  <div class='second-place badge'>
+                    <img src='IMAGES/download.Jpg' width='120'>
+                  </div>
+                </div>
+              </div>
+              <div class='user-points'>
+                <h2><span class='score'>22</span>Points</h2>
+              </div>
+            </div>
+          </div>
+          <div class='card card-header third'>
+            <div class="card-body">
+              <div class='user-name'>
+                <div class='card-head'>
+                  <h1>Precious</h1>
+                  <div class='third-place medal'>
+                    <img src='IMAGES/download (1).Jpg' width='120'>
+                  </div>
+                </div>
+              </div>
+              <div class='user-points'>
+                <h2><span class='score'>20</span>Points</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+ 
 
+  <section>
+    <div class="container">
+      <h1 class='mb-2'>Other User</h1>
+      <div class="other-user">
+        <div class='card card-header'>
+          <div class="card-body">
+            <div class='user-name'>
+              <h1>Faleye</h1>
+            </div>
+            <div class='user-points'>
+              <h2><span class='score'>20</span>Points</h2>
+            </div>
+          </div>
+        </div>
+        <div class='card card-header'>
+          <div class="card-body">
+            <div class='user-name'>
+              <h1>Eniola</h1>
+            </div>
+            <div class='user-points'>
+              <h2><span class='score'>19</span>Points</h2>
+            </div>
+          </div>
+        </div>
+        <div class='card card-header'>
+          <div class="card-body">
+            <div class='user-name'>
+              <h1>Ephraim</h1>
+            </div>
+            <div class='user-points'>
+              <h2><span class='score'>18</span>Points</h2>
+            </div>
+          </div>
+        </div>
+        <div class='card card-header'>
+          <div class="card-body">
+            <div class='user-name'>
+              <h1>Raheem</h1>
+            </div>
+            <div class='user-points'>
+              <h2><span class='score'>17</span>Points</h2>
+            </div>
+          </div>
+        </div>
+        <div class='card card-header'>
+          <div class="card-body">
+            <div class='user-name'>
+              <h1>Michael</h1>
+            </div>
+            <div class='user-points'>
+              <h2><span class='score'>16</span>Points</h2>
+            </div>
+          </div>
+        </div>
+        <div class='card card-header'>
+          <div class="card-body">
+            <div class='user-name'>
+              <h1>Joshua</h1>
+            </div>
+            <div class='user-points'>
+              <h2><span class='score'>15</span>Points</h2>
+            </div>
+          </div>
+        </div>
+        <div class='card card-header'>
+          <div class="card-body">
+            <div class='user-name'>
+              <h1>Chisom</h1>
+            </div>
+            <div class='user-points'>
+              <h2><span class='score'>14</span>Points</h2>
+            </div>
+          </div>
+        </div>
+        <div class='card card-header'>
+          <div class="card-body">
+            <div class='user-name'>
+              <h1>Dayo</h1>
+            </div>
+            <div class='user-points'>
+              <h2><span class='score'>13</span>Points</h2>
+            </div>
+          </div>
+        </div>
+        <div class='card card-header'>
+          <div class="card-body">
+            <div class='user-name'>
+              <h1>Femi</h1>
+            </div>
+            <div class='user-points'>
+              <h2><span class='score'>12</span>Points</h2>
+            </div>
+          </div>
+        </div>
+        <div class='card card-header'>
+          <div class="card-body">
+            <div class='user-name'>
+              <h1>Funsho</h1>
+            </div>
+            <div class='user-points'>
+              <h2><span class='score'>11</span>Points</h2>
+            </div>
+          </div>
+        </div>
+        <div class='card card-header'>
+          <div class="card-body">
+            <div class='user-name'>
+              <h1>Toluope</h1>
+            </div>
+            <div class='user-points'>
+              <h2><span class='score'>10</span>Points</h2>
+            </div>
+          </div>
+        </div>
+        <div class='card card-header'>
+          <div class="card-body">
+            <div class='user-name'>
+              <h1>Olaniyi</h1>
+            </div>
+            <div class='user-points'>
+              <h2><span class='score'>9</span>Points</h2>
+            </div>
+          </div>
+        </div >
+      </div>
+  </section>
+  <script src='data.js' type='text/javascript'></script>
+  <script src='script.js' type='text/javascript'></script>
+</body>
 
 </html>
