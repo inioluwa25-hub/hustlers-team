@@ -40,7 +40,6 @@ def home():
             df.sort_values(by=['points'], inplace=True, ascending=False)
             print(df.values[:6])
             print(df.head())
-            # return render_template('index.html', data=data)
             return render_template("result.html", data=df.values, total=len(df))
         else:
             flash("Please select a csv or json file")
@@ -48,14 +47,9 @@ def home():
     return render_template('upload.html')
 
 
-
-@app.route('/leaderboard')
-def leaderboard():
-    return render_template('index.html')
-
 @app.route('/result')
 def result():
          return render_template('result.html', data=[])
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
