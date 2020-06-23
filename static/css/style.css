@@ -49,6 +49,14 @@
     grid-gap:2em;
     margin: 1em 0;
   }
+
+  .mb-leads {
+    margin-top: 20px;
+  }
+
+  .mt-leads {
+    margin-bottom: -30px;
+  }
   
   .first {
     border-top: solid 5px rgb(218, 83, 83);
