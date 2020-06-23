@@ -6,92 +6,95 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;1,300&display=swap"
     rel="stylesheet">
-    <title>Leader Board</title>
-    <link href="{{url_for('static', filename='css/style.css')}}" rel='stylesheet' type="text/css">
+  <title>Leader Board</title>
+  <link href="{{url_for('static', filename='css/style.css')}}" rel='stylesheet' type="text/css">
 </head>
 
+
 <body>
-    <Header>
-      <div class='container'>
-        <div class='board'>
-          <div>
-            <h1>HNG Leader Board</h1>
-            <p>Total Candidates: <span id='total-user'>1,500</span></p>
-          </div>
-          <div class='sort-user'>
-            <select>
-              <option>Sort by Points</option>
-              <option value=20>20 points</option>
-              <option value=15>15 points</option>
-              <option value=20>Above 10 points</option>
-              <option value=20>8 points</option>
-              <option value=20>Below 6 points</option>
-              <option value=20>4 points</option>
-              <option value=20>3 points</option>
-              <option value=20>2 points</option>
-              <option value=20>1 points</option>
-            </select>
-          </div>
+
+  <Header>
+
+    <div class='container'>
+      <div class='board'>
+        <div>
+          <h1>HNG Leader Board</h1>
+          <p>Total Candidates: <span id='total-user'>{{ total }}</span></p>
+        </div>
+        <div class='sort-user'>
+          <select>
+            <option>Sort by Points</option>
+            <option value=20>20 points</option>
+            <option value=15>15 points</option>
+            <option value=20>Above 10 points</option>
+            <option value=20>8 points</option>
+            <option value=20>Below 6 points</option>
+            <option value=20>4 points</option>
+            <option value=20>3 points</option>
+            <option value=20>2 points</option>
+            <option value=20>1 points</option>
+          </select>
         </div>
       </div>
-    </Header>
+    </div>
+  </Header>
 
-    <!-- {% if data %} -->
-    <section>
-      <div class="container">
-        <h1 class='mb-2'>Top Users</h1>
-        <div class="top-user">
+  <!-- {% if data %} -->
+  <section>
+    <div class="container">
+      <h1 class='mb-2'>Top Users</h1>
+      <div class="top-user">
 
-          <div class='card card-header second mb-leads'>
-            <div class="card-body">
-              <div class='user-name'>
-                <div class="card-head">
-                  <h1>{{ data[1][0] }}</h1>
-                  <div class='second-place badge'>
-                    <img src="{{url_for('static', filename='images/download.jpg')}}" width='120'>
-                  </div>
+        <div class='card card-header second mb-leads'>
+          <div class="card-body">
+            <div class='user-name'>
+              <div class="card-head">
+                <h1>{{ data[1][0] }}</h1>
+                <div class='second-place badge'>
+                  <img src="{{url_for('static', filename='images/download.jpg')}}" width='120'>
                 </div>
               </div>
-              <div class='user-points'>
-                <h2><span class='score'>{{ data[1][1] }}</span> Points</h2>
-              </div>
+            </div>
+            <div class='user-points'>
+              <h2><span class='score'>{{ data[1][1] }}</span> Points</h2>
             </div>
           </div>
+        </div>
 
-          <div class='card card-header first'>
-            <div class="card-body">
+        <div class='card card-header first'>
+          <div class="card-body">
+            <div class='card-head'>
+              <h1 class='user-name'> {{ data[0][0] }}</h1>
+
+              <div class='first-place medal'>
+                <img src="{{url_for('static', filename='images/download2.jpg')}}" width='120'>
+              </div>
+            </div>
+            <div class='user-points'>
+              <h2><span class='score'>{{ data[0][1] }}</span>Points</h2>
+            </div>
+          </div>
+        </div>
+
+        <div class='card card-header third mb-leads'>
+          <div class="card-body">
+            <div class='user-name'>
               <div class='card-head'>
-                <h1 class='user-name'> {{ data[0][0] }}</h1>
-  
-                <div class='first-place medal'>
-                  <img src="{{url_for('static', filename='images/download2.jpg')}}" width='120'>
+                <h1>{{ data[2][0] }}</h1>
+                <div class='third-place medal'>
+                  <img src="{{url_for('static', filename='images/download1.jpg')}}" width='120'>
                 </div>
-              </div>
-              <div class='user-points'>
-                <h2><span class='score'>{{ data[0][1] }}</span>Points</h2>
               </div>
             </div>
-          </div>
-
-          <div class='card card-header third mb-leads'>
-            <div class="card-body">
-              <div class='user-name'>
-                <div class='card-head'>
-                  <h1>{{ data[2][0] }}</h1>
-                  <div class='third-place medal'>
-                    <img src="{{url_for('static', filename='images/download1.jpg')}}" width='120'>
-                  </div>
-                </div>
-              </div>
-              <div class='user-points'>
-                <h2><span class='score'>{{ data[2][1] }}</span>Points</h2>
-              </div>
+            <div class='user-points'>
+              <h2><span class='score'>{{ data[2][1] }}</span>Points</h2>
             </div>
           </div>
         </div>
       </div>
-    </section>
- 
+    </div>
+  </section>
+
 
   <section>
     <div class="container">
@@ -107,129 +110,19 @@
             </div>
           </div>
         </div>
-        <div class='card card-header'>
-          <div class="card-body">
-            <div class='user-name'>
-              <h1>Eniola</h1>
-            </div>
-            <div class='user-points'>
-              <h2><span class='score'>19</span>Points</h2>
-            </div>
-          </div>
-        </div>
-        <div class='card card-header'>
-          <div class="card-body">
-            <div class='user-name'>
-              <h1>Ephraim</h1>
-            </div>
-            <div class='user-points'>
-              <h2><span class='score'>18</span>Points</h2>
-            </div>
-          </div>
-        </div>
-        <div class='card card-header'>
-          <div class="card-body">
-            <div class='user-name'>
-              <h1>Raheem</h1>
-            </div>
-            <div class='user-points'>
-              <h2><span class='score'>17</span>Points</h2>
-            </div>
-          </div>
-        </div>
-        <div class='card card-header'>
-          <div class="card-body">
-            <div class='user-name'>
-              <h1>Michael</h1>
-            </div>
-            <div class='user-points'>
-              <h2><span class='score'>16</span>Points</h2>
-            </div>
-          </div>
-        </div>
-        <div class='card card-header'>
-          <div class="card-body">
-            <div class='user-name'>
-              <h1>Joshua</h1>
-            </div>
-            <div class='user-points'>
-              <h2><span class='score'>15</span>Points</h2>
-            </div>
-          </div>
-        </div>
-        <div class='card card-header'>
-          <div class="card-body">
-            <div class='user-name'>
-              <h1>Chisom</h1>
-            </div>
-            <div class='user-points'>
-              <h2><span class='score'>14</span>Points</h2>
-            </div>
-          </div>
-        </div>
-        <div class='card card-header'>
-          <div class="card-body">
-            <div class='user-name'>
-              <h1>Dayo</h1>
-            </div>
-            <div class='user-points'>
-              <h2><span class='score'>13</span>Points</h2>
-            </div>
-          </div>
-        </div>
-        <div class='card card-header'>
-          <div class="card-body">
-            <div class='user-name'>
-              <h1>Femi</h1>
-            </div>
-            <div class='user-points'>
-              <h2><span class='score'>12</span>Points</h2>
-            </div>
-          </div>
-        </div>
-        <div class='card card-header'>
-          <div class="card-body">
-            <div class='user-name'>
-              <h1>Funsho</h1>
-            </div>
-            <div class='user-points'>
-              <h2><span class='score'>11</span>Points</h2>
-            </div>
-          </div>
-        </div>
-        <div class='card card-header'>
-          <div class="card-body">
-            <div class='user-name'>
-              <h1>Toluope</h1>
-            </div>
-            <div class='user-points'>
-              <h2><span class='score'>10</span>Points</h2>
-            </div>
-          </div>
-        </div>
-        <div class='card card-header'>
-          <div class="card-body">
-            <div class='user-name'>
-              <h1>Olaniyi</h1>
-            </div>
-            <div class='user-points'>
-              <h2><span class='score'>9</span>Points</h2>
-            </div>
-          </div>
-        </div >
       </div>
   </section>
 
 
-    <!-- {% else %}
+  <!-- {% else %}
 
-    <div class="container">
-      No data read
-    </div>
-    {% endif %} -->
+  <div class="container">
+    No data read
+  </div>
+  {% endif %} -->
 
-  
-    
+
+
 </body>
 
 </html>

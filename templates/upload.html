@@ -8,15 +8,23 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="container w-75 d-flex justify-content-center align-items-center">
-        <form method="POST" action="http://localhost:5000/" enctype="multipart/form-data">
-            <div class="custom-file">
-                <input type="file" class="custom-file-input" name="file" id="customFile">
-                <label class="custom-file-label" for="customFile">Choose file</label>
-                <div class="d-flex align-items-center">
-                    <button class="btn btn-primary" type="submit">Upload</button>
-                </div>
-        </form>
+    <div class="container align-center">
+        <div class="container w-75">
+            <h1>
+                UPLOAD A FILE TO DISPLAY LEADERBOARD
+            </h1>
+        </div>
+        <div class="container w-75 d-flex justify-content-center align-items-center">
+            <form method="POST" action="http://localhost:5000/" enctype="multipart/form-data">
+                <div class="custom-file">
+                    <input type="file" class="custom-file-input" name="file" id="customFile">
+                    <label class="custom-file-label" for="customFile">Choose file</label>
+                    <div class="d-flex align-items-center">
+                        <button class="btn btn-primary" type="submit">Upload</button>
+                    </div>
+            </form>
+        </div>
+
     </div>
 </body>
 </html>

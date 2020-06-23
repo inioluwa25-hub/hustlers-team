@@ -15,6 +15,8 @@ def is_allowed(filename):
     extension = filename.rsplit('.', 1)[1]
     return '.' in filename and extension in ALLOWED_EXTENSIONS, extension
 
+def export(data):
+         return render_template('result.html', data=data)
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
@@ -35,12 +37,13 @@ def home():
             if is_allowed(f.filename)[1] == 'json':
                 data = pd.read_json(file_location)
             df = pd.DataFrame(data, columns=['names', 'points'])
-            data = df.sort_values(by=['points'], inplace=True, ascending=False)
+            df.sort_values(by=['points'], inplace=True, ascending=False)
             print(df.values[:6])
             print(df.head())
-            return render_template('index.html', data=data)
+            # return render_template('index.html', data=data)
+            return render_template("result.html", data=df.values, total=len(df))
         else:
-            flash("Please enter a csv or json file")
+            flash("Please select a csv or json file")
             return redirect(url_for('home'))
     return render_template('upload.html')
 
@@ -50,7 +53,9 @@ def home():
 def leaderboard():
     return render_template('index.html')
 
-
+@app.route('/result')
+def result():
+         return render_template('result.html', data=[])
 
 if __name__ == '__main__':
     app.run(debug=True)
